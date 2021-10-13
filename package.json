@@ -1,0 +1,35 @@
+{
+  "name": "all_in_one_sec",
+  "version": "1.0.0",
+  "description": "do an chuyen nganh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoanDac-Grik/all-in-one-security.git"
+  },
+  "keywords": [
+    "all in one security",
+    "g0d b0iz",
+    "autopentest",
+    "check safe link"
+  ],
+  "author": "doanvandac, letuananh, nguyenquanghuy, nguyenquangtruong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoanDac-Grik/all-in-one-security/issues"
+  },
+  "homepage": "https://github.com/DoanDac-Grik/all-in-one-security#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13"
+  }
+}
