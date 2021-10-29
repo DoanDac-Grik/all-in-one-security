@@ -56,6 +56,8 @@
     var categoriesJson = JSON.parse('<%- JSON.stringify(categories) %>');
     var categorySlugJson = JSON.parse('<%- JSON.stringify(categorySlug) %>');
 
+    console.log(blogsJson);
+
     // Add posts HTML template
     var arrPostHTML = blogsJson.map(function(blog) {
         return `
@@ -67,20 +69,29 @@
                         </a> 
                     </div>
                     
-                    <div class="post-content-container py-2">
+                    <div class="post-content-container">
                         <div class="post-title">
-                            <a href="" class="post-title-link">
+                            <a href="/blog/p/${blog.slug}" class="post-title-link">
                                 ${blog.title}
                             </a>
                         </div>
 
-                        <div class="short-description-container">
+                        <div class="post-time-container d-flex align-items-center">
+                            <div class="post-time-icon-container">
+                                <i class="fas fa-clock post-time-icon"></i>
+                            </div>
+                            <div>
+                                <p class="post-time fst-italic fw-light">${new Date(blog.createdAt).toLocaleString()}</p>
+                            </div>
+                        </div>
+
+                        <div class="short-description-container mt-3">
                             <p class="short-description">
                                 ${blog.short_description}
                             </p>
                         </div>
 
-                        <div class="post-info-container d-flex align-items-center justify-content-between">
+                        <div class="post-info-container">
                             <div class="post-author-container d-flex align-items-center">
                                 <div class="post-author-image-container">
                                     <img src="/img/user.png" class="rounded-circle post-author-image" alt="">
@@ -89,15 +100,6 @@
                                     <p class="post-author">
                                         <a href="" class="post-author-link">Admin 123</a> 
                                     </p>
-                                </div>
-                            </div>
-
-                            <div class="post-time-container d-flex align-items-center">
-                                <div class="post-time-icon-container">
-                                    <i class="fas fa-clock post-time-icon"></i>
-                                </div>
-                                <div>
-                                    <p class="post-time fst-italic fw-light">${new Date(blog.createdAt).toLocaleString()}</p>
                                 </div>
                             </div>
                         </div>

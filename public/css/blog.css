@@ -120,7 +120,8 @@
 }
 
 .post-container {
-    width: 90%;
+    width: 100%;
+    margin: 0 20px;
 }
 
 .post-detail-link {
@@ -138,14 +139,14 @@
 }
 
 .post-image {
-    width: 90%;
-    height: 80%;
+    width: 300px;
+    height: 225px;
     display: block;
     margin: 0 auto;
 }
 
 .post-content-container {
-    width: 90%;
+    margin-left: 30px;
 }
 
 .post-title {

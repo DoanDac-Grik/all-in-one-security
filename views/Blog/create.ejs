@@ -5,7 +5,7 @@
         <h2 class="main__container-heading text-center">Create blog</h2>
     </div>
 
-    <form action="/blog/store" method="post" class="main__container-form">
+    <form action="/blog/store" method="POST" class="main__container-form" enctype="multipart/form-data">
         <div class="form-group">
             <label for="title">Title (*)</label>
             <input type="text" name="title" id="title" class="form-control" placeholder="Title 1..." required>
@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
             <label for="short-description">Short description (*)</label>
-            <input type="text" name="short-description" id="short-description" class="form-control" placeholder="Short Description 1..." required>
+            <input type="text" name="short_description" id="short-description" class="form-control" placeholder="Short Description 1..." required>
         </div>
         <div class="form-group">
             <label for="content">Content (*)</label>
@@ -24,22 +24,32 @@
         </div>
         <div class="form-group">
             <label for="category">Category (*)</label>
-            <select name="category" id="category" class="form-control">
+            <select name="category_slug" id="category" class="form-control">
             </select>
         </div>
         <div class="form-group">
             <label for="image">Blog image (thumbnail) (*)</label><br>
-            <input type="file" class="form-control-file" id="image" accept=".jpg, .jpeg, .png" required>
+            <input type="file" name="image" class="form-control-file" id="image" accept=".jpg, .jpeg, .png" required>
         </div>
 
         <div class="form-group-submit">
-            <input type="submit" name="submit" value="Submit" class="submit-btn btn btn-primary">
+            <button type="submit" name="submit" value="Submit" class="submit-btn btn btn-primary">Submit</button>
         </div>
     </form>
     
 </div>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
 <script>
+    new FroalaEditor('textarea');
+    function removeAccents(str) {
+        return str.normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/đ/g, 'd').replace(/Đ/g, 'D');
+    }
+
+    var titleInput = document.querySelector('input#title');
+    var slugInput = document.querySelector('input#slug');
     var categoriesJson = JSON.parse('<%- JSON.stringify(categories) %>');
     var categorySelect = document.querySelector('#category');
 
@@ -52,4 +62,10 @@
 
     // Render HTML
     categorySelect.innerHTML = arrCategoriesHTML.join('');
+
+    titleInput.addEventListener('blur', (e) => {
+        var titleValue = removeAccents(e.target.value.toLowerCase().trim());
+        slugInput.value = titleValue.split(' ').join('-');
+    });
+
 </script>

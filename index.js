@@ -20,6 +20,7 @@ app.set('view engine','ejs');
 // Use static file
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use(express.urlencoded({
     extended:true
 }));
