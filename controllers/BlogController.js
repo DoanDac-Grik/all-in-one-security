@@ -45,21 +45,42 @@ class BlogController {
         Blog.findOne(condition)
             .then(blog => {
                 // Request fail
-                if (!blog || !blog.id) {
+                if (!blog) {
                     res.status(404).render("exception/404.ejs", {
                         layout: false
                     });
                 }
 
                 res.render('blog/detail', {
-                    'title': 'Detail',
+                    'title': blog.title,
                     'css': 'detail',
                     blog
                 }); 
             })
             .catch(next);
-        
     }
+
+    /*
+        Create post
+    */
+    create(req, res, next) {
+        Category.find({})
+            .then(categories => {
+                res.render('blog/create', {
+                    'title': 'Create blog',
+                    'css': 'create',
+                    categories
+                }); 
+            })    
+            .catch(next)
+    }
+
+    /*
+        Store blog
+    */
+   store(req, res, next) {
+       res.json("Create post");
+   }
 }
 
 module.exports = new BlogController();

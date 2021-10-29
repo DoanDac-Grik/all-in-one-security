@@ -19,6 +19,16 @@
                 </form>
             </div>
         </div>
+
+        <div class="btn__create-post-container">
+            <a href="/blog/create" class="blog__create-link">
+                <button class="btn btn-success px-3 py-2">
+                    Create
+                    <i class="fas fa-arrow-circle-right"></i>
+                </button>
+            </a>
+        </div>
+
         <!-- Category -->
         <div class="main__category-container d-flex align-items-center">
             <div>
@@ -40,7 +50,6 @@
 
 <script>
     var postHtml = "";
-    var categoryHtml = "";
     var post = document.querySelector('.main__posts-wrapper');
     var category = document.querySelector('.category__list');
     var blogsJson = JSON.parse('<%- JSON.stringify(blogs) %>');
@@ -111,10 +120,7 @@
         return categoryItemHTML;
     });
 
-    
-    arrPostHTML.forEach(element => {
-        postHtml += element;
-    });
+    postHtml = arrPostHTML.join('');
 
     // No post
     if (arrPostHTML.length == 0) {
@@ -127,14 +133,10 @@
             </div>
         `;
     }
-    
-    arrCategoriesHTML.forEach(element => {
-        categoryHtml += element;
-    });
+
 
     // Render HTML
     post.innerHTML = postHtml;
-    category.innerHTML = categoryHtml;
-
+    category.innerHTML = arrCategoriesHTML.join('');
 
 </script>

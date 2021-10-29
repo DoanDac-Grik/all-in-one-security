@@ -61,6 +61,23 @@
     outline: none;
 }
 
+/* Create link */
+.btn__create-post-container {
+    margin-bottom: 2rem;
+}
+
+.blog__create-link {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.blog__create-link button {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
 /* Category */
 .main__category-container {
     border-bottom: 1px solid #444;
