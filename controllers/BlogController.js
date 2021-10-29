@@ -3,6 +3,7 @@ const Blog = require('../models/Blog');
 const Category = require('../models/Category');
 const multer  = require('multer');
 const path = require('path');
+const UploadHelper = require('../helpers/upload');
 
 class BlogController {
     /*
@@ -90,20 +91,11 @@ class BlogController {
         Store blog
     */
     store(req, res, next) {
+        let path = 'public/img/post/';
+        let param = 'image';
+        const upload = UploadHelper.upload(path, param);
 
-        const storage = multer.diskStorage({
-            destination: function(req, file, cb) {
-                cb(null, 'public/img/post/');
-            },
-        
-            // By default, multer removes file extensions so let's add them back
-            filename: function(req, file, cb) {
-                cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-            }
-        });
-
-        const upload = multer({ storage: storage }).single('image');
-
+        // Upload image
         upload(req, res, function(err) {
             if (req.fileValidationError) {
                 return res.send(req.fileValidationError);
@@ -121,7 +113,8 @@ class BlogController {
             var formData = req.body;
             formData.image = req.file.filename;
 
-             if (formData.submit !== "Submit") {
+            // Not enter "Submit"
+            if (formData.submit !== "Submit") {
                 res.status(404).render("exception/404.ejs", {
                     layout: false
                 });
@@ -134,27 +127,6 @@ class BlogController {
                 })  
                 .catch(next);
         })
-
-        
-
-
-        // var formData = req.body;
-
-        // console.log(req.file);
-        // dd();
-
-        // if (formData.submit !== "Submit") {
-        //     res.status(404).render("exception/404.ejs", {
-        //         layout: false
-        //     });
-        // }
-
-        // const blog = new Blog(formData);
-        // blog.save({})
-        //     .then(() => {
-        //         res.redirect('/blog');
-        //     })  
-        //     .catch(next);
         
     }
 }

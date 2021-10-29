@@ -41,7 +41,7 @@
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
 <script>
-    new FroalaEditor('textarea');
+    // Remove accents
     function removeAccents(str) {
         return str.normalize('NFD')
                 .replace(/[\u0300-\u036f]/g, '')
@@ -68,4 +68,13 @@
         slugInput.value = titleValue.split(' ').join('-');
     });
 
+</script>
+
+<script>
+    new FroalaEditor('textarea', {
+        imageUploadParam: 'image_detail_post',
+        imageUploadURL: '/upload',
+        imageUploadMethod: 'POST',
+        imageAllowedTypes: ['jpeg', 'jpg', 'png'],
+    });
 </script>
