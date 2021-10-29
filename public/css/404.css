@@ -1,0 +1,57 @@
+@import url('./partials/root.css');
+@import url('./partials/header.css');
+@import url('./partials/footer.css');
+
+/* Main title */
+#mainNav {
+    background-color: transparent;
+}
+
+main {
+    height: 100vh;
+}
+
+.main__container {
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    background-image: url('/img/pentest_wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.main__header-code {
+    font-size: 10rem;
+    font-weight: 500;
+    letter-spacing: 0.8rem;
+}   
+
+.main__sub-header {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    letter-spacing: 0.2rem;
+}
+
+.main__sub-header-desciption {  
+    font-size: 2rem;
+}
+
+.main__link-home {
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #ffc800;
+    border-color: #ffc800;
+    font-weight: bold;
+}
+
+.main__link-home:hover {
+    color: #fff;
+    background-color: #d9aa00;
+    border-color: #cca000;
+    transition: all ease 0.2s;
+}

@@ -1,0 +1,209 @@
+@import url('./partials/root.css');
+@import url('./partials/header.css');
+@import url('./partials/footer.css');
+
+/* Main */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.wrapper {
+    position: relative;
+}
+
+main {
+    margin-bottom: 10rem;
+    position: relative;
+    top: 60px;
+}
+
+.sidebar__icon-container {
+    position: absolute;
+    height: 60%;
+    left: 8%;
+    top: 12%;
+}
+
+.sidebar__icon-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    position: sticky;
+    top: 20px;
+    
+}
+
+.sidebar__icon-item {
+    margin: 20px 0;
+}
+
+.sidebar__icon-item-link {
+    display: block;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #333;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.sidebar__icon-item-link:hover {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.sidebar__icon {
+    font-size: 1.5rem;
+}
+
+
+/* Main post */
+.main__container {
+    width: 70%;
+    margin: 30px auto;
+}
+
+.main__detail-title-container, .main__detail-image-container {
+    text-align: center;
+}
+
+.post__detail-time {
+    font-size: 1.1rem;
+}
+
+.post__detail-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.main__detail-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.main__detail-description-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.main__detail-short-Description {
+    color: #7c7979;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.main__detail-description {
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+
+
+.detail__post-author-wrapper {
+    border-top: 1px solid rgba(151, 151, 151, 0.2);
+    padding-top: 30px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
+.detail__post-author-container,
+.detail__post-contact-container {
+    width: 48%;
+}
+
+.author-info-heading {
+    color: #949494;
+    font-weight: 650;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.detail__post-author, 
+.contact-social-media-icon {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 80px;
+    padding: 30px 25px;
+}
+
+.detail__post-author-image {
+    width: 50px;
+    height: 50px;
+}
+
+.post-author-name {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.post-author-name-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.post-author-name-link:hover {
+    color: #333;
+    opacity: 0.8;
+}
+
+.post-author-job {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+
+.contact-btn-link {
+    text-decoration: none;
+    display: block;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 8px 12px;
+}
+
+.contact-btn-link:hover {
+    color: #fff;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.contact-btn-link:not( :hover ),
+.social-media-icon__link:not( :hover ) {
+    transition: all 0.2s;
+}
+
+
+
+.social-media-icon__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 32px;
+}
+
+.social-media-icon__item {
+    margin: 0 8px;
+}
+
+.social-media-icon__link {
+    color: #fff;
+    display: block;
+    background-color: #e8e8e9;
+    padding: 9px 11px;
+    border-radius: 25px;
+}
+
+.social-media-icon__link:hover {
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.social-media__icon {
+    color: #333;
+    font-size: 1rem;
+}

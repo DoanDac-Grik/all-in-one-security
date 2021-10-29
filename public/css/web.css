@@ -1,0 +1,101 @@
+@import url('./partials/root.css');
+@import url('./partials/header.css');
+@import url('./partials/footer.css');
+
+/* Main title */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.main {
+    margin-bottom: 10rem;
+    position: relative;
+    top: 50px;
+    margin-top: 10rem;
+}
+
+.main__scan-form-container {
+    margin-top: 100px;
+}
+
+.form__checkURL {
+    width: 55%;
+    margin: 30px auto 40px;
+    border-radius: 20px;
+}
+
+.form-group {
+    margin: 0 auto;
+}
+
+.input__url {
+    width: 100%;
+    padding: 0 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.input__scan-submit {
+    margin-left: 20px;
+    padding: 8px 35px;
+    font-weight: 600;
+}
+
+.main__scan-options {
+    width: 100%;
+}
+
+.scan__options-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.scan__options-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 300px;
+    height: 60px;
+    margin: 0 15px;
+    padding: 4px 10px;
+    cursor: pointer;
+    box-shadow: 4px 5px 7px #a1a1a1;
+    font-size: 1.0rem;
+    background-color: #fff;
+    color: #333;
+}
+
+.scan__options-item--chosen {
+    background-color: #333;
+    color: #ebd513;
+}
+
+.scan__options-item:hover {
+    background-color: #333;
+    color: #ebd513;
+    font-size: 1.1rem;
+    transition: all ease-in-out 0.2s;
+}
+
+.scan__options-item:not( :hover ) {
+    transition: all ease 0.2s;
+}
+
+.scan__options {
+    padding: 0 10px;
+}
+
+.scan-information {
+    width: 70%;
+    margin: 20px auto;
+    line-height: 1.8rem;
+}

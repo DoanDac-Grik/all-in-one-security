@@ -1,0 +1,78 @@
+@import url('./partials/root.css');
+@import url('./partials/header.css');
+@import url('./partials/footer.css');
+
+/* Main */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.main {
+    margin-bottom: 10rem;
+    position: relative;
+    top: 50px;
+}
+
+.main__header {
+    margin-top: 100px;
+}
+
+.main__scan-description {
+    font-size: 1rem;
+}
+
+.main__file-scan-container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    padding: 30px 6rem;
+}
+
+.main__file-scan-icon {
+    font-size: 3.8rem;
+    color: #ffc800;
+}
+
+.file {
+    border: 1px solid #333;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 2px 15px;
+}
+
+.file-name {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.file-close-btn {
+    padding: 2px;
+}
+
+.main__file-scan-terms {
+    font-size: 0.8rem;
+    margin-top: 2.5rem;
+}
+
+.main__file-btn {
+    padding: 5px 20px;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.main__file-btn:hover {
+    background-color: #fff;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+
+.hide {
+    display: none;
+}

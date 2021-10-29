@@ -1,0 +1,120 @@
+<%- contentFor('body') %>
+<div class="wrapper container">
+    <!-- Sidebar icon -->
+    <div class="sidebar__wrapper">
+        <div class="sidebar__icon-container">
+            <ul class="sidebar__icon-list">
+                <li class="sidebar__icon-item">
+                    <a href="" class="sidebar__icon-item-link">
+                        <i class="fab fa-facebook-f sidebar__icon"></i>
+                    </a>
+                </li>
+                <li class="sidebar__icon-item">
+                    <a href="" class="sidebar__icon-item-link">
+                        <i class="fab fa-instagram sidebar__icon"></i>
+                    </a>
+                </li>
+                <li class="sidebar__icon-item">
+                    <a href="" class="sidebar__icon-item-link">
+                        <i class="fab fa-twitter sidebar__icon"></i>
+                    </a>
+                </li>
+                <li class="sidebar__icon-item">
+                    <a href="" class="sidebar__icon-item-link">
+                        <i class="fab fa-linkedin-in sidebar__icon"></i>
+                    </a>
+                </li>
+                <li class="sidebar__icon-item">
+                    <a href="/blog" class="sidebar__icon-item-link" title="Back to Blog">
+                        <i class="fas fa-arrow-left sidebar__icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Detail post -->
+    <div class="main__container">
+        <div class="main__detail-title-container mb-5">
+            <div class="post__detail-time-container">
+                <p class="post__detail-time">Published <%= new Date(blog.createdAt).toDateString() %></p>
+            </div>
+            <div class="post__detail-title-container mt-4">
+                <h3 class="post__detail-title">
+                    <%= blog.title %>
+                </h3>
+            </div>
+        </div>
+        <div class="main__detail-description-wrapper">
+            <div class="main__detail-image-container">
+                <img src="/img/post/<%= blog.image %>" alt="post image" class="main__detail-image" title="Post image">
+            </div>
+            <div class="main__detail-description-container mt-5">
+                <p class="main__detail-short-Description">
+                    <%= blog.short_description %>
+                </p>
+                <p class="main__detail-description">
+                    <%= blog.content %>
+                </p>
+            </div>
+        </div>
+        <div class="detail__post-author-wrapper d-flex align-items-center justify-content-between">
+            <div class="detail__post-author-container">
+                <div class="detail__post-author-header">
+                    <h4 class="text-uppercase author-info-heading">About the author</h4>
+                </div>
+                <div class="detail__post-author d-flex align-items-center">
+                    <div class="detail__post-author-image-container">
+                        <a href="" class="detail__post-author-image-link">
+                            <img src="/img/user.png" alt="author" class="rounded-circle detail__post-author-image">
+                        </a>
+                    </div>
+                    <div class="post-author-name-container m-lg-4">
+                        <p class="post-author-name">
+                            <a href="" class="post-author-name-link">Admin 123</a>
+                        </p>
+                        <p class="post-author-job">Design Lead</p>
+                    </div>
+                </div>
+            </div>  
+            <div class="detail__post-contact-container">
+                <div class="detail__post-contact-header">
+                    <h4 class="text-uppercase author-info-heading">Connect with us</h4>
+                </div>
+                <div class="contact-social-media-icon d-flex align-items-center">
+                    <div class="contact-btn-container">
+                        <a href="#" class="contact-btn-link">Contact us</a>
+                    </div>
+                    <div class="social-media-icon-container">
+                        <ul class="social-media-icon__list d-flex align-items-center">
+                            <li class="social-media-icon__item">
+                                <a href="" class="social-media-icon__link">
+                                    <i class="fab fa-facebook-f social-media__icon"></i>
+                                </a>
+                            </li>
+                            <li class="social-media-icon__item">
+                                <a href="" class="social-media-icon__link">
+                                    <i class="fab fa-instagram social-media__icon"></i>
+                                </a>
+                            </li>
+                            <li class="social-media-icon__item">
+                                <a href="" class="social-media-icon__link">
+                                    <i class="fab fa-twitter social-media__icon"></i>
+                                </a>
+                            </li>
+                            <li class="social-media-icon__item">
+                                <a href="" class="social-media-icon__link">
+                                    <i class="fab fa-linkedin-in social-media__icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="/js/blog/detail.js"></script>
