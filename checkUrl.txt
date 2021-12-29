@@ -1,0 +1,17 @@
+[
+  { '0xSI_f33d': 'unrated' },
+  { 'Comodo Valkyrie Verdict': 'unrated' },
+  { PhishLabs: 'unrated' },
+  { Cyan: 'unrated' },
+  { Fortinet: 'phishing' },
+  { SafeToOpen: 'unrated' },
+  { AutoShun: 'unrated' },
+  { 'Chong Lua Dao': 'phishing' },
+  { Lumu: 'unrated' },
+  { Segasec: 'phishing' },
+  { Netcraft: 'unrated' },
+  { StopBadware: 'unrated' },
+  { NotMining: 'unrated' }
+]
+trust:  76
+distrust:  13

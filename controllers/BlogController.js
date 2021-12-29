@@ -33,7 +33,7 @@ class BlogController {
                         });
 
                         // Render view
-                        res.render('blog/index', {
+                        res.render('Blog/index', {
                             'title': 'Blog',
                             'css': 'blog',
                             blogs,
@@ -58,12 +58,12 @@ class BlogController {
             .then(blog => {
                 // Request fail
                 if (!blog) {
-                    res.status(404).render("exception/404.ejs", {
+                    res.status(404).render("Exception/404.ejs", {
                         layout: false
                     });
                 }
 
-                res.render('blog/detail', {
+                res.render('Blog/detail', {
                     'title': blog.title,
                     'css': 'detail',
                     blog
@@ -78,7 +78,7 @@ class BlogController {
     create(req, res, next) {
         Category.find({})
             .then(categories => {
-                res.render('blog/create', {
+                res.render('Blog/create', {
                     'title': 'Create blog',
                     'css': 'create',
                     categories
@@ -115,7 +115,7 @@ class BlogController {
 
             // Not enter "Submit"
             if (formData.submit !== "Submit") {
-                res.status(404).render("exception/404.ejs", {
+                res.status(404).render("Exception/404.ejs", {
                     layout: false
                 });
             }

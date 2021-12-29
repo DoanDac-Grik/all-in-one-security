@@ -3,10 +3,11 @@ class HomeController {
         Home Page
     */
     index(req, res, next) {
-        res.render('home/index', {
+        res.render('Home/index', {
             'title': 'Pentest - Safety first',
             'css': 'app'
         });
+        
     }
 }
 

@@ -12,6 +12,9 @@ db.connect();
 
 app.use(morgan('combined'));
 
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
 app.use(expressLayouts);
 app.set('layout', './layouts/layout')
 app.set('view engine','ejs');
@@ -34,7 +37,7 @@ app.use(function (req, res, next) {
     });
 });
 
-const port = 3000;
+const port = 3001;
 app.listen(port, ()=>{
     console.log(`App listening at port ${port}`)
 });

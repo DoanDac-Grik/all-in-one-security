@@ -1,6 +1,6 @@
 class EncryptFileController {
     showEncryptFile(req, res, next) {
-        res.render('pentest/encrypt-file', {
+        res.render('Pentest/encrypt-file', {
             'title': 'Ecryption file',
             'css': 'web'
         });

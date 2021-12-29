@@ -3,7 +3,7 @@ class AboutController {
         About Page
     */
     index(req, res, next) {
-        res.render('team/about', {
+        res.render('Team/about', {
             'title': 'About us',
             'css': 'about'
         });
