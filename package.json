@@ -31,7 +31,8 @@
     "express-ejs-layouts": "^2.5.1",
     "mongoose": "^6.0.12",
     "node-virustotal": "^3.35.0",
-    "wysiwyg-editor-node-sdk": "^4.0.6"
+    "wysiwyg-editor-node-sdk": "^4.0.6",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "froala-editor": "^4.0.6",
