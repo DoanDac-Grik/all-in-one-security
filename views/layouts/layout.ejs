@@ -34,6 +34,9 @@
         
         <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 
+        <!-------- JQuery ----------->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <!-------- nhúng icon ----------->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <!-- Google fonts-->
@@ -46,6 +49,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+        <script>
+            $(document).ready(function() {
+                $('.form__checkURL').on('submit', () => {
+                    $(".loading-text").css("display", "block");
+                    $(".loader-wrapper").fadeIn();
+                })
+            })
+        </script>
     </head>
 <body>
     <div class="app">
@@ -58,6 +69,11 @@
 
             <!-- Navigation-->
             <%- include('../partials/header'); -%>
+
+            <div class="loader-wrapper">
+                <p class="loading-text" style="display: none;">Waiting for result...</p>
+                <div class="loader"></div>
+            </div>
 
             <main>
                 <%- body %>

@@ -1,0 +1,85 @@
+@import url("./partials/root.css");
+@import url("./partials/header.css");
+@import url("./partials/footer.css");
+
+.loader-wrapper {
+    display: none;
+}
+
+.main__container {
+    margin: 70px 0 100px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.main__domain {
+    margin: 20px 0 30px;
+    font-size: 2rem;
+}
+
+.domain__text {
+    color: #2a2af1;
+    text-decoration: underline;
+}
+
+.result__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    border: 1px solid #fff;
+    width: 120px;
+    height: 120px;
+    font-size: 3.5rem;
+    border-radius: 100px;
+    background-color: #07c207;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.danger {
+    background-color: #f11919;
+}
+
+.result__number-container {
+    margin-top: 10px;
+}
+
+.number__service-warning {
+    color: #f11919;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* If no risk */
+.success {
+    color: #07c207;
+    font-weight: 700;
+}
+
+.main__tables {
+    margin-top: 40px;
+    font-size: 1.3rem;
+}
+
+.main__detail-scan {
+    margin-top: 50px;
+}
+
+.detail-scan {
+    margin: 30px 0;
+}
+
+.list-detail {
+    margin: 0 auto;
+    width: 50%;
+    font-size: 1.3rem;
+}
+
+.list-group-item-success {
+    background-color: #49e949;
+}
