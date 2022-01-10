@@ -2,7 +2,9 @@ const express = require('express');
 const morgan = require('morgan');
 const ejs = require('ejs');
 const path = require('path');
+const flash = require('connect-flash');
 var expressLayouts = require("express-ejs-layouts");
+const session = require('express-session');
 const route = require('./routes/index.js');
 const app = express();
 const db = require('./config/db');
@@ -11,6 +13,14 @@ const db = require('./config/db');
 db.connect();
 
 app.use(morgan('combined'));
+
+app.use(session({
+    secret: 'geeksforgeeks',
+    saveUninitialized: true,
+    resave: true
+}));
+
+app.use(flash());
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');

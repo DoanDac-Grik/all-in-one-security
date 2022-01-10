@@ -1,0 +1,66 @@
+@import url("./partials/root.css");
+@import url("./partials/header.css");
+@import url("./partials/footer.css");
+
+.main__container {
+    margin: 50px 0 100px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.main__header {
+    margin: 20px 0;
+}
+
+.main__heading {
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.heading-url {
+    color: blue;
+    text-decoration: underline;
+}
+
+.check-icon {
+    color: #2ae62a;
+}
+
+.main__statitics-container {
+    margin: 50px 0;
+}
+
+.table {
+    font-size: 1rem;
+    table-layout: fixed;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+/* .table td {
+    text-align: justify;
+} */
+
+.symbol-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.symbol-item {
+    padding: 0 10px;
+}
+
+.symbol-high {
+    color: #f83f3f;
+}
+
+.symbol-medium {
+    color: #fabb46;
+}
+
+.symbol-low {
+    color: #0000ff;
+}

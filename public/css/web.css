@@ -22,7 +22,8 @@
   margin-top: 100px;
 }
 
-.form__checkURL {
+.form__checkURL,
+.form__checkWeb-base {
   width: 55%;
   margin: 30px auto 40px;
   border-radius: 20px;
@@ -98,6 +99,26 @@
   width: 70%;
   margin: 20px auto;
   line-height: 1.8rem;
+}
+
+/* .main__information-risk-container {
+  display: flex;
+  justify-content: space-around;
+} */
+
+/* .main__information-risk-phishing,
+.main__information-risk-malware {
+  flex: 1;
+} */
+
+.risk-malware-heading,
+.risk-phishing-heading {
+  text-align: center;
+
+}
+
+.risk-phishing-content-container {
+  width: 90%;
 }
 
 .loader-wrapper {

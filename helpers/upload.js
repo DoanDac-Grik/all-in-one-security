@@ -15,9 +15,32 @@ class UploadHelper {
             }
         });
 
-        const upload = multer({ storage: storage }).single(param);
+        const upload = multer({
+            storage: storage,
+            limits: {
+                fileSize: 1 * 1024 * 1024 // 2MB
+            }
+        }).single(param);
 
         return upload;
+    }
+
+    checkValidFile(res, req, err) {
+        if (req.fileValidationError) {
+            return res.send(req.fileValidationError);
+        } else if (!req.file) {
+            if (err.code === 'LIMIT_FILE_SIZE') {
+                req.flash('message', 'File too large');
+                return res.redirect('/encrypt-file');
+            }
+            return res.send('Please select a file to upload');
+        } else if (err instanceof multer.MulterError) {
+            return res.send(err);
+        } else if (err) {
+            return res.send(err);
+        }
+
+        return true;
     }
 }
 
