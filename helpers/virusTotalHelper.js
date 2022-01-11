@@ -1,9 +1,10 @@
 const nvt = require('node-virustotal');
 require('dotenv').config();
 const request = nvt.makeAPI().setKey(process.env.API_KEY);
+const axios = require('axios');
 
-
-class CheckSafeLink {
+class VirusTotalHelper {
+    //use virus total to check domain safe or not
     checkDomain(domain) {
         return new Promise((resolve, reject) => {
             request.domainLookup(domain, function (err, res) {
@@ -12,7 +13,7 @@ class CheckSafeLink {
             });
         });
     }
-
+    //just a filtering to get clean domain :)
     reduceUrl(domain) {
         const heaerUrls = [
             'https://',
@@ -21,15 +22,23 @@ class CheckSafeLink {
             'https://www.',
         ]
         const findInclude = heaerUrls.find(heaerUrl => domain.includes(heaerUrl))
-
         return findInclude ? (new URL(domain)).hostname.replace('www.', '') : domain;
     }
-    //Se lam sau
-    //checkUrl(url)
+    //with file's hash, call api virus-total to check file safe or not
+    checkFile(hash, options){
+        const data = async function() {
+            try {
+                return await axios.get(`https://www.virustotal.com/api/v3/search?query=${hash}`, options);    
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        return data().then(data =>data);
+    }
 
 
 }
-module.exports = new CheckSafeLink();
+module.exports = new VirusTotalHelper();
 // if (err) {
 //     console.log('Virustotal API did not work because:');
 //     console.log(err);
