@@ -12,9 +12,13 @@
     font-size: 1.5rem;
 }
 
+.main__heading {
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
 .main__domain {
     margin: 20px 0 30px;
-    font-size: 2rem;
 }
 
 .domain__text {

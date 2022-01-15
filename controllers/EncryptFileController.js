@@ -25,13 +25,13 @@ class EncryptFileController {
             console.log(req.file);
             
             // Download file
-            res.download(`${req.file.destination}/${req.file.filename}`, (err) => {
-                if (err) {
-                    res.status(500).send({
-                        message: "File can not be downloaded: " + err,
-                    });
-                }
-            })
+            // res.download(`${req.file.destination}/${req.file.filename}`, (err) => {
+            //     if (err) {
+            //         res.status(500).send({
+            //             message: "File can not be downloaded: " + err,
+            //         });
+            //     }
+            // })
 
             // Delete file
             // unlink(`${req.file.destination}/${req.file.filename}`, (err) => {

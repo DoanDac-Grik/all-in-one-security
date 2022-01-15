@@ -8,7 +8,7 @@
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1030;
+    z-index: 2;
 }
 
 .main {
@@ -23,6 +23,31 @@
 
 .main__scan-description {
     font-size: 1rem;
+}
+
+.service-action__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-btn {
+    background-color: #fff;
+    color: #333;
+    margin: 0 20px;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+
+.service-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.service-btn-click {
+    background-color: #333;
+    color: #fff;
 }
 
 .main__file-scan-container {

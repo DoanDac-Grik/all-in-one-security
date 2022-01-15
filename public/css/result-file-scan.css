@@ -1,0 +1,247 @@
+@import url("./partials/root.css");
+@import url("./partials/header.css");
+@import url("./partials/footer.css");
+
+.loader-wrapper {
+    display: none;
+}
+
+.main__container {
+    margin: 50px auto 100px;
+}
+
+.main__heading {
+    font-size: 3rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.main__file-info-scan-number-container {
+    display: flex;
+    width: 1296px;
+    margin-top: 40px;
+}
+
+.result-scan-icon {
+    border: 1px solid #ffffff;
+    background-color: #f11919;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 2.8rem;
+}
+
+.result-scan-number {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.number-scan {
+    color: #f11919;
+    font-weight: 700;
+}
+
+.main__file-info-wrapper {
+    margin: 0 0 0 30px;
+    width: 100%;
+}
+
+.file-info-container {
+    border: 1px solid #eaeaea;
+}
+
+.file-common-scan-container,
+.file-info,
+.tag-container {
+    padding: 0 30px;
+}
+
+.file-common-scan-container {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.common-scan-icon {
+    border: 1px solid #f11919;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: #f11919;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.file-common-scan-text {
+    margin: 0;
+    font-weight: 700;
+    padding-left: 15px;
+    color: #f11919;
+}
+
+.file-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.file-info p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.file-size, 
+.file-upload {
+    border-left: 1px solid #c7c7c7;
+    padding-left: 20px;
+}
+
+.file-size-label,
+.file-upload-label {
+    color: #949494;
+}
+
+.tag-list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    flex-wrap: wrap;
+    
+}
+
+.tag-item:first-child {
+    margin-left: 0;
+}
+
+.tag-item {
+    margin: 0 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.tag-item .tag {
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+}
+
+/* Table scan report */
+
+.main__file-scan-result-container {
+    margin: 50px 0;
+}
+
+.table-scan-file-result {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.table-scan-file-result p {
+    margin-bottom: 2px;
+}
+
+.table-scan-file-result .service-result__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.table-scan-file-result .service-result__container {
+    display: flex;
+    align-items: center;
+    /* margin: 0 100px; */
+}
+
+.table-scan-file-result .service-result__container:first-child {
+    margin-left: 0;
+}
+
+.result-serivce {
+    display: flex;
+}
+
+.table-scan-file-result .common-scan-icon {
+    font-size: 0.6rem;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.service-text {
+    width: 250px;
+}
+
+.result-service-text {
+    width: 200px;
+    color: #f11919;
+}
+
+
+
+
+/* Detail tables */
+.property__heading {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.property-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.property-item {
+    display: flex;
+    font-size: 0.8rem;
+}
+
+.property-detail-item-label {
+    width: 150px;
+}
+
+.property-history-item-label {
+    width: 120px;
+}
+
+
+
+
+/* Unable to process */
+.unable-process {
+    color: #a4a0a0;
+    border-color: #a4a0a0;
+}
+
+.unable-process-text {
+    color: #a4a0a0;
+}
+
+
+/* Result success */
+.success {
+    background-color: #07c207;
+}
+
+.success-alt {
+    background-color: #fff;
+    color: #07c207;
+    border-color: #07c207;
+}
+
+.success-text {
+    color: #07c207;
+}
