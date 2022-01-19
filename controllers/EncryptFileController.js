@@ -27,11 +27,11 @@ class EncryptFileController {
     resultFile(req, res, next) {
         const key = req.query?.key || null;
         const filename = req.query?.filename || null;
+        const ext = req.query?.ext || null;
         const pathFolder = 'public/file/result';
         const action = key ? 'Encrypt' : 'Decrypt'; 
 
         if (filename) {
-            
             stat(pathFolder + '/' + filename, (err, stats) => {
                 if (err) {
                     console.log(`File doesn't exist.`);
@@ -42,7 +42,8 @@ class EncryptFileController {
                         key,
                         action,
                         filename,
-                        filesize: stats.size
+                        filesize: stats.size,
+                        ext
                     })
                 }
             })
@@ -127,6 +128,9 @@ class EncryptFileController {
         upload(req, res, (err) => {
             const validFile = UploadHelper.checkValidFile(res, req, err);
             console.log(req.file);
+            // console.log(req.file.originalname.split('.'));
+            const exts = req.file.originalname.split('.');
+            const fileExt = exts[exts.length - 2];
             const password = req.body.secretDescrypt;
 
             // First, get the initialization vector from the file.
@@ -164,7 +168,7 @@ class EncryptFileController {
                         // Delete file
                         unlink(`${req.file.destination}/${req.file.filename}`, (err) => {
                             if (err) throw err;
-                            res.redirect(`/encrypt-file/result?filename=${req.file.filename}.unenc`);
+                            res.redirect(`/encrypt-file/result?filename=${req.file.filename}.unenc&ext=${fileExt}`);
                         });
                     })
 
