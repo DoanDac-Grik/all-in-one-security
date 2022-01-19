@@ -18,7 +18,7 @@ class UploadHelper {
         const upload = multer({
             storage: storage,
             limits: {
-                fileSize: 1 * 1024 * 1024 // 2MB
+                fileSize: 1 * 1024 * 1024 // 1MB
             }
         }).single(param);
 
