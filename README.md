@@ -1,6 +1,6 @@
 # All-in-One Security
 
-> Một thời cùng nhau cày cuốc làm đồ án chuyên ngành với Tuấn Anh và Quốc Huy. Dòng commit đầu tiên vào ngày 13/10/2021, hôm nay 15/05/2026 Đoàn Đắc bắt đầu dùng Claude Code để refactor lại cho đẹp hơn và tốt hơn.
+> Một thời cùng nhau cày cuốc làm đồ án chuyên ngành với Tuấn Anh và Quốc Huy. Dòng commit đầu tiên vào ngày 13/10/2021, hôm nay 15/05/2026 Đoàn Đắc bắt đầu refactor lại cho đẹp hơn.
 
 ---
 
