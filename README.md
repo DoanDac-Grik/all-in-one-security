@@ -1,6 +1,14 @@
 # All-in-One Security
 
-Web utility platform for information security tooling, built with Express.js and TypeScript.
+> Một thời cùng nhau cày cuốc làm đồ án chuyên ngành với Tuấn Anh và Quốc Huy. Dòng commit đầu tiên vào ngày 13/10/2021, hôm nay 15/05/2026 Đoàn Đắc bắt đầu dùng Claude Code để refactor lại cho đẹp hơn và tốt hơn.
+
+---
+
+Đồ án chuyên ngành An toàn thông tin, được phát triển bởi nhóm ba sinh viên: **Đoàn Đắc**, **Tuấn Anh** và **Quốc Huy**.
+
+Dự án xây dựng một nền tảng web tích hợp nhiều công cụ bảo mật thông tin thực tiễn — từ quét mã độc, kiểm tra lỗ hổng web, đến mã hóa file và chia sẻ kiến thức bảo mật qua blog — nhằm giúp người dùng có thể thực hiện các tác vụ pentest và bảo vệ dữ liệu cơ bản ngay trên trình duyệt mà không cần cài đặt thêm công cụ.
+
+Built with Express.js and TypeScript.
 
 ## Features
 
