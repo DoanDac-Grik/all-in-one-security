@@ -2,10 +2,10 @@ import { Router, Request, Response, NextFunction } from 'express';
 import encryptFileController from '../controllers/encrypt-file.controller';
 
 const router = Router();
-router.post('/file-encrypt', (req: Request, res: Response, next: NextFunction) =>
+router.post('/encrypt', (req: Request, res: Response, next: NextFunction) =>
   encryptFileController.fileEncrypt(req, res, next),
 );
-router.post('/file-decrypt', (req: Request, res: Response, next: NextFunction) =>
+router.post('/decrypt', (req: Request, res: Response, next: NextFunction) =>
   encryptFileController.fileDescrypt(req, res, next),
 );
 router.get('/result', (req: Request, res: Response, next: NextFunction) =>

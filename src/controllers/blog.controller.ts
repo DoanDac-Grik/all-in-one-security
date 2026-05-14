@@ -7,7 +7,7 @@ import UploadHelper from '../helpers/upload.helper';
 
 class BlogController {
   index(req: Request, res: Response, next: NextFunction): void {
-    const categorySlug = req.params.slug;
+    const categorySlug = req.query.category as string | undefined;
     const searchValue = req.query.search as string | undefined;
 
     const condition: FilterQuery<IBlogDocument> = {};

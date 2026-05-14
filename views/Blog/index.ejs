@@ -7,7 +7,7 @@
         <!-- Search form -->
         <div class="main__search-container">
             <div class="form__search-wrapper">
-                <form action="/blog/search" method="get" class="form__search">
+                <form action="/blog" method="get" class="form__search">
                     <div class="form-group d-flex align-items-center">
                         <label for="search" class="search-icon-container">
                             <a href="">
@@ -64,14 +64,14 @@
             <div class="post-wrapper mt-4">
                 <div class="post-container d-flex">
                     <div class="post-image-container">
-                        <a href="/blog/p/${blog.slug}" class="post-detail-link" title="${blog.title}">
+                        <a href="/blog/${blog.slug}" class="post-detail-link" title="${blog.title}">
                             <img src="/img/post/${blog.image}" alt="" class="post-image">
                         </a> 
                     </div>
                     
                     <div class="post-content-container">
                         <div class="post-title">
-                            <a href="/blog/p/${blog.slug}" class="post-title-link">
+                            <a href="/blog/${blog.slug}" class="post-title-link">
                                 ${blog.title}
                             </a>
                         </div>
@@ -115,7 +115,7 @@
 
         var categoryItemHTML = `
             <li class="category__item">
-                <a href="/blog/${category.slug}" class="category__item-link ${classExtend}">${category.name}</a> 
+                <a href="/blog?category=${category.slug}" class="category__item-link ${classExtend}">${category.name}</a>
             </li>
         `;
 

@@ -12,14 +12,14 @@ Web utility platform for information security tooling, built with Express.js and
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Runtime | Node.js |
-| Framework | Express.js 4.x |
-| Language | TypeScript 5.x |
-| Templates | EJS (server-rendered) |
-| Database | MongoDB via Mongoose 6.x |
-| Styling | SCSS → CSS |
+| Layer     | Technology               |
+| --------- | ------------------------ |
+| Runtime   | Node.js                  |
+| Framework | Express.js 4.x           |
+| Language  | TypeScript 5.x           |
+| Templates | EJS (server-rendered)    |
+| Database  | MongoDB via Mongoose 6.x |
+| Styling   | SCSS → CSS               |
 
 ## Prerequisites
 
@@ -49,28 +49,28 @@ npm run dev
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|---|---|---|
-| `MONGODB_URI` | MongoDB connection string | — |
-| `API_KEY` | VirusTotal API key | — |
-| `SESSION_SECRET` | Express session secret | `changeme` |
-| `PASSWORD_GENERATE_LENGTH` | Length of generated encryption passwords | `20` |
-| `PORT` | Server port | `3001` |
+| Variable                   | Description                              | Default    |
+| -------------------------- | ---------------------------------------- | ---------- |
+| `MONGODB_URI`              | MongoDB connection string                | —          |
+| `API_KEY`                  | VirusTotal API key                       | —          |
+| `SESSION_SECRET`           | Express session secret                   | `changeme` |
+| `PASSWORD_GENERATE_LENGTH` | Length of generated encryption passwords | `20`       |
+| `PORT`                     | Server port                              | `3001`     |
 
 See `.env.example` for a template.
 
 ## npm Scripts
 
-| Script | Description |
-|---|---|
-| `npm run dev` | Start with ts-node + nodemon (auto-reload on save) |
-| `npm run build` | Compile TypeScript to `dist/` |
-| `npm start` | Run compiled production build |
-| `npm run lint` | Run ESLint on `src/` |
-| `npm run lint:fix` | Auto-fix ESLint issues |
-| `npm run format` | Format `src/` with Prettier |
-| `npm run format:check` | Check formatting without writing |
-| `npm run watch` | Compile SCSS to `public/css/` |
+| Script                 | Description                                        |
+| ---------------------- | -------------------------------------------------- |
+| `npm run dev`          | Start with ts-node + nodemon (auto-reload on save) |
+| `npm run build`        | Compile TypeScript to `dist/`                      |
+| `npm start`            | Run compiled production build                      |
+| `npm run lint`         | Run ESLint on `src/`                               |
+| `npm run lint:fix`     | Auto-fix ESLint issues                             |
+| `npm run format`       | Format `src/` with Prettier                        |
+| `npm run format:check` | Check formatting without writing                   |
+| `npm run watch`        | Compile SCSS to `public/css/`                      |
 
 ## Project Structure
 
@@ -102,6 +102,7 @@ all-in-one-security/
 Pre-commit hooks are configured via [Lefthook](https://github.com/evilmartians/lefthook). After `npm install`, hooks are installed automatically via the `prepare` script.
 
 On each commit, staged `.ts` files in `src/` are automatically:
+
 1. Linted and auto-fixed by ESLint
 2. Formatted by Prettier
 3. Re-staged so fixes are included in the commit
