@@ -23,15 +23,15 @@ Built with Express.js and TypeScript.
 | Layer     | Technology               |
 | --------- | ------------------------ |
 | Runtime   | Node.js                  |
-| Framework | Express.js 4.x           |
-| Language  | TypeScript 5.x           |
+| Framework | Express.js 5.x           |
+| Language  | TypeScript 6.x           |
 | Templates | EJS (server-rendered)    |
-| Database  | MongoDB via Mongoose 6.x |
+| Database  | MongoDB via Mongoose 9.x |
 | Styling   | SCSS → CSS               |
 
 ## Prerequisites
 
-- Node.js 18+
+- Node.js 20+
 - npm 8+
 - MongoDB Atlas account (or local MongoDB instance)
 - OWASP ZAP installed at `/usr/share/zaproxy/zap.sh` (for web pentest feature — Linux/Kali only)
